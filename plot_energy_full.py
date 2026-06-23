@@ -13,8 +13,8 @@ times, E_modes, E_total = simulate_fput(N, alpha, dt, T_max)
 E_sum = np.sum(E_modes, axis=0)
 
 plt.figure(figsize=(10, 6))
-plt.plot(times, E_sum, label='Сумма энергий первых пяти мод', color='blue', linewidth=1.5)
-plt.plot(times, E_total, label='Полная энергия (сумма энергий всех частиц)', color='red', linewidth=1.5)
+plt.plot(times, E_sum, label='Полная энергия 1 (суммирование энергий мод)', color='blue', linewidth=1.5)
+plt.plot(times, E_total, label='Полная энергия 2 (через координаты и скорости частиц)', color='red', linewidth=1.5)
 
 plt.xlim(left=0, right=T_max)
 plt.ylim(bottom=0)
