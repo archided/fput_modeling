@@ -4,7 +4,7 @@ from fput_simulation import simulate_fput
 N = 16
 dt = 0.01
 T_max = 4000
-alphas = [0, 0.05, 0.25, 0.5, 1.0, 1.5]
+alphas = [0, 0.05, 0.25, 0.5, 1.0]
 
 alpha_list = []
 TR_list = []
