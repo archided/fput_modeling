@@ -4,7 +4,7 @@ from fput_simulation import simulate_fput
 N = 16
 alpha = 0.25
 dt = 0.01
-T_max = 2000
+T_max = 2500
 
 times, E_modes, _ = simulate_fput(N, alpha, dt, T_max)
 
