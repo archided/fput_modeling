@@ -33,12 +33,7 @@ def simulate_fput(N, alpha, dt, T_max, save_every=10):
             left = x[i-1] if i > 0 else 0.0
             right = x[i+1] if i < N-1 else 0.0
             a[i] = (right - 2*x[i] + left)
-            if i > 0:
-                a[i] -= alpha * ((x[i] - left)**2)
-            if i < N-1:
-                a[i] += alpha * ((right - x[i])**2)
-            else:
-                a[i] += alpha * ((0.0 - x[i])**2)
+            a[i] = (right - 2*x[i] + left) + alpha * ((right - x[i])**2) - alpha * ((x[i] - left)**2)
         return np.concatenate([v, a])
 
     def rk4_step(state, dt, alpha):
